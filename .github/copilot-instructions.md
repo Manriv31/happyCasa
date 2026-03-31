@@ -21,4 +21,3 @@ Proyecto web para creacion de sitio web de empresa de remodelacion de baños/cas
 - Cuando en la solicitud se te solicite "explicacion" ten encuenta esta palabra ya que debes enfocar tu respuesta en expllicar por medio del chat y no tocar nada de archivos ni hacer modificaciones, solo explicar por medio del chat
 - Si la tarea que se asigna es enfocada en frontend debes usar las instruccciones realizadas en instructions/frontend.instructions.md
 - Si la tarea que se asigna es enfocada en backend debes usar las instruccciones realizadas en instructions/backend.instructions.md
-- Debes responder siempre al final exactamente esta frase "Todo bien jefe?"
