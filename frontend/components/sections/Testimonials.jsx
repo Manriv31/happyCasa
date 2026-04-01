@@ -1,5 +1,7 @@
+"use client"
+
 import { useState, useRef } from 'react'
-import useInView from '../../hooks/useInView'
+import useInView from '@/hooks/useInView'
 
 const testimonials = [
   {
@@ -108,7 +110,7 @@ export default function Testimonials() {
           </h2>
           <div className="w-20 h-1 bg-brand-yellow mx-auto rounded-full mt-4" />
           <p className="mt-6 text-lg text-brand-text-secondary max-w-2xl mx-auto">
-            Don't just take our word for it — here's what homeowners have to say
+            Don&apos;t just take our word for it — here&apos;s what homeowners have to say
             about their experience with Happy Casa.
           </p>
         </div>

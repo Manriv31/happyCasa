@@ -1,6 +1,8 @@
+"use client"
+
 import { useRef } from 'react'
-import useInView from '../../hooks/useInView'
-import MascotShowcase from '../ui/MascotShowcase'
+import useInView from '@/hooks/useInView'
+import MascotShowcase from '@/components/ui/MascotShowcase'
 
 const highlights = [
   { value: '10+', label: 'Years of Experience' },
@@ -36,7 +38,7 @@ export default function AboutUs() {
             </p>
             <p className="mt-4 text-brand-text-secondary text-lg leading-relaxed">
               From outdated bathrooms to luxurious retreats, we handle every project with
-              care and professionalism — so you can enjoy the home you've always dreamed of.
+              care and professionalism — so you can enjoy the home you&apos;ve always dreamed of.
             </p>
 
             {/* Stats */}

@@ -1,11 +1,15 @@
-import heroImage from '../../assets/landing/bathroom_1.jpg'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section
-      className="relative w-full min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
+    <section className="relative w-full min-h-screen">
+      <Image
+        src="/images/landing/bathroom_1.jpg"
+        alt="Beautiful bathroom remodel by Happy Casa"
+        fill
+        className="object-cover"
+        priority
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
 
       <div className="relative min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-end">
@@ -16,7 +20,7 @@ export default function Hero() {
             Improvement Needs
           </h1>
           <p className="mt-6 text-base sm:text-lg md:text-xl text-white/90 font-medium max-w-xl ml-auto leading-relaxed">
-            Whether it's a small project or a major renovation,
+            Whether it&apos;s a small project or a major renovation,
             our team is ready to handle all your needs with expertise and efficiency.
           </p>
           <a

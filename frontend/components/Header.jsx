@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
-import logo from "../assets/logos/happycasa-web-logo.svg"
+"use client"
+
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -7,10 +10,10 @@ export default function Header() {
   return (
     <header className="bg-white backdrop-blur-md w-full">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <a className="block text-brand-blue" href="#">
+        <Link className="block text-brand-blue" href="/">
           <span className="sr-only">Home</span>
-          <img src={logo} alt="Happy Casa Logo" className="h-14 w-auto" />
-        </a>
+            <Image src="/images/logos/happycasa-web-logo.svg" alt="Happy Casa Logo" width={112} height={56} className="h-14 w-auto w-32 h-auto" priority />
+        </Link>
 
         <div className="flex flex-1 items-center justify-end md:justify-between">
           <nav
@@ -35,7 +38,6 @@ export default function Header() {
               <li>
                 <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="#contact"> Contact Us </a>
               </li>
-              
             </ul>
           </nav>
 

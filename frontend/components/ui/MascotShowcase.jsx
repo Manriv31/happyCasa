@@ -1,6 +1,8 @@
+"use client"
+
 import { useState, useEffect, useRef } from 'react'
-import mascot from '../../assets/logos/happycasa-mascot.svg'
-import useInView from '../../hooks/useInView'
+import Image from 'next/image'
+import useInView from '@/hooks/useInView'
 import { BathroomScene, KitchenScene, LivingRoomScene, PatioScene } from './RoomScenes'
 
 const scenes = [
@@ -81,10 +83,12 @@ export default function MascotShowcase() {
             : 'translate-x-[150%] opacity-0'
         }`}
       >
-        <img
-          src={mascot}
+        <Image
+          src="/images/logos/happycasa-mascot.svg"
           alt="Happy Casa Mascot"
-          className={`w-36 md:w-44 drop-shadow-xl`}
+          width={176}
+          height={176}
+           className="w-36 md:w-44 drop-shadow-xl h-auto"
         />
       </div>
     </div>

@@ -1,5 +1,7 @@
+"use client"
+
 import { useRef } from 'react'
-import useInView from '../../hooks/useInView'
+import useInView from '@/hooks/useInView'
 
 const services = [
   {

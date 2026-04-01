@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function TopHeader() {
   return (
     <div className="bg-gradient-to-r from-[#0a1628] to-[#0e2a4e] text-white py-1.5 px-4 relative z-50">
