@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function TopHeader() {
   return (
     <div className="bg-gradient-to-r from-[#0a1628] to-[#0e2a4e] text-white py-1.5 px-4 relative z-50">
@@ -23,17 +25,17 @@ export default function TopHeader() {
             <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.093L2.25 6.75" />
             </svg>
-            <span className="font-medium">info@happycasa.com</span>
+            <span className="font-medium">info@hellohappycasa.com</span>
           </a>
         </div>
 
         {/* CTA */}
-        <button className="hidden sm:flex items-center gap-1.5 bg-brand-yellow text-black px-4 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:shadow-[0_0_14px_rgba(244,180,0,0.45)] hover:scale-105 cursor-pointer">
+        <Link href="/contact" className="hidden sm:flex items-center gap-1.5 bg-brand-yellow text-black px-4 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide transition-all duration-300 hover:shadow-[0_0_14px_rgba(244,180,0,0.45)] hover:scale-105">
           <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 20.25v-1.125C3.75 16.007 6.257 13.5 9.375 13.5h.008c.343 0 .682.023 1.014.069M21.75 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97l-2.66.886.886-2.66A8.962 8.962 0 013 15.75C3 11.194 7.03 7.5 12 7.5s9 3.694 9 4.5z" />
           </svg>
           Get in Touch
-        </button>
+        </Link>
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import "./globals.css";
 import TopHeader from "@/components/TopHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ui/ChatBot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,14 +36,13 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="font-sans antialiased min-h-full flex flex-col">
-        <div className="fixed top-0 w-full z-50">
+        <div className="sticky top-0 w-full z-50">
           <TopHeader />
           <Header />
         </div>
-        <div className="pt-28 md:pt-32 min-h-screen flex flex-col">
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
+        <main className="flex-grow">{children}</main>
+        <Footer />
+        <ChatBot />
       </body>
     </html>
   );

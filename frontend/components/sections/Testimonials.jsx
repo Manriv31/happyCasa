@@ -93,7 +93,7 @@ export default function Testimonials() {
     <section
       ref={sectionRef}
       id="testimonials"
-      className="scroll-mt-28 md:scroll-mt-32 py-24 bg-white overflow-hidden"
+      className="scroll-mt-28 md:scroll-mt-32 py-24 bg-gradient-to-b from-[#071a40] to-[#09122f] overflow-hidden"
     >
       {/* Section Header */}
       <div
@@ -102,14 +102,14 @@ export default function Testimonials() {
         }`}
       >
         <div className="text-center">
-          <span className="inline-block px-4 py-1.5 bg-brand-yellow/10 text-brand-yellow font-semibold text-sm rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 bg-brand-yellow/20 text-brand-yellow font-semibold text-sm rounded-full mb-4 tracking-wide uppercase">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-brand-text tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
             What Our Clients Say
           </h2>
           <div className="w-20 h-1 bg-brand-yellow mx-auto rounded-full mt-4" />
-          <p className="mt-6 text-lg text-brand-text-secondary max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-blue-100 max-w-2xl mx-auto">
             Don&apos;t just take our word for it — here&apos;s what homeowners have to say
             about their experience with Happy Casa.
           </p>
@@ -123,8 +123,8 @@ export default function Testimonials() {
         onMouseLeave={() => setPaused(false)}
       >
         {/* Gradient overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#071a40] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#09122f] to-transparent z-10 pointer-events-none" />
 
         <div
           className="flex animate-scroll"

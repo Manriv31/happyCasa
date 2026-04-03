@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from 'react'
+import Link from 'next/link'
 import useInView from '@/hooks/useInView'
 
 const services = [
@@ -85,7 +86,7 @@ export default function Services() {
   const isInView = useInView(ref)
 
   return (
-    <section ref={ref} id="services" className="scroll-mt-28 md:scroll-mt-32 py-24 bg-brand-bg">
+    <section ref={ref} id="services" className="scroll-mt-28 md:scroll-mt-32 py-24 bg-gradient-to-b from-white to-blue-50/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
@@ -111,13 +112,15 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 border border-brand-border flex flex-col items-center text-center group hover:-translate-y-1 ${
+              className={`relative bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-brand-border flex flex-col items-center text-center group hover:-translate-y-2 overflow-hidden ${
                 isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-bg group-hover:bg-brand-yellow shadow-sm transition-colors duration-300 mb-6">
-                <div className="text-brand-yellow group-hover:text-white transition-colors duration-300">
+              {/* Top accent bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-brand-blue/20 group-hover:bg-brand-blue transition-colors duration-300" />
+              <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-blue/10 group-hover:bg-brand-blue shadow-sm transition-colors duration-300 mb-6">
+                <div className="text-brand-blue group-hover:text-white transition-colors duration-300">
                   {service.icon}
                 </div>
               </div>
@@ -129,6 +132,28 @@ export default function Services() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-14">
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-blue text-white font-semibold text-base shadow-lg hover:bg-brand-blue-hover hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+          >
+            Our Services
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+          <Link
+            href="/projects"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-text text-white font-semibold text-base hover:bg-brand-text/80 hover:-translate-y-0.5 transition-all duration-300"
+          >
+            See Our Work
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 19.5h18M3.75 4.5h16.5a.75.75 0 01.75.75v11.25a.75.75 0 01-.75.75H3.75a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75z" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

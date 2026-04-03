@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from 'react'
+import Link from 'next/link'
 import useInView from '@/hooks/useInView'
 import MascotShowcase from '@/components/ui/MascotShowcase'
 
@@ -15,7 +16,7 @@ export default function AboutUs() {
   const isInView = useInView(ref)
 
   return (
-    <section ref={ref} id="about" className="scroll-mt-28 md:scroll-mt-32 py-24 bg-white">
+    <section ref={ref} id="about" className="scroll-mt-28 md:scroll-mt-32 py-24 bg-gradient-to-b from-slate-50 via-blue-50/40 to-white">
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ease-out ${
           isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -54,6 +55,17 @@ export default function AboutUs() {
                 </div>
               ))}
             </div>
+
+            {/* CTA */}
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-brand-blue text-white font-semibold hover:bg-brand-blue-hover hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+            >
+              More About Us
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </Link>
           </div>
 
           {/* Mascot Showcase */}

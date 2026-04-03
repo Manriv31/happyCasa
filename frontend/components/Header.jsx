@@ -8,11 +8,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white backdrop-blur-md w-full">
+    <header className="bg-white/95 backdrop-blur-md w-full border-b-2 border-brand-yellow shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <Link className="block text-brand-blue" href="/">
           <span className="sr-only">Home</span>
-            <Image src="/images/logos/happycasa-web-logo.svg" alt="Happy Casa Logo" width={112} height={56} className="h-14 w-auto w-32 h-auto" priority />
+            <Image src="/images/logos/happycasa-web-logo.svg" alt="Happy Casa Logo" width={112} height={56} className="h-14 w-auto" priority />
         </Link>
 
         <div className="flex flex-1 items-center justify-end md:justify-between">
@@ -27,16 +27,16 @@ export default function Header() {
               `}
             >
               <li>
-                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="#about"> About Us</a>
+                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="/about"> About Us</a>
               </li>
               <li>
-                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="#services"> Services </a>
+                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="/services"> Services </a>
               </li>
               <li>
-                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="#"> Past Projects </a>
+                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="/projects"> Past Projects </a>
               </li>
               <li>
-                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="#contact"> Contact Us </a>
+                <a className="text-gray-800 transition hover:text-gray-500 hover:border-b-2 hover:border-yellow-400 border-transparent border-b-2 pb-1" href="/contact"> Contact Us </a>
               </li>
             </ul>
           </nav>
