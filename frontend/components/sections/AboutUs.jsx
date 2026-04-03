@@ -1,13 +1,13 @@
 "use client"
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import useInView from '@/hooks/useInView'
-import MascotShowcase from '@/components/ui/MascotShowcase'
 
 const highlights = [
   { value: '10+', label: 'Years of Experience' },
-  { value: '500+', label: 'Projects Completed' },
+  { value: '500+', label: 'Bathrooms Remodeled' },
   { value: '98%', label: 'Customer Satisfaction' },
 ]
 
@@ -68,9 +68,28 @@ export default function AboutUs() {
             </Link>
           </div>
 
-          {/* Mascot Showcase */}
+          {/* Bathroom Image */}
           <div className="flex justify-center lg:justify-end">
-            <MascotShowcase />
+            <div className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-brand-border aspect-[4/3]">
+              <Image
+                src="/images/landing/bathroom_1.jpg"
+                alt="Premium bathroom remodel by Happy Casa"
+                fill
+                className="object-cover"
+              />
+              {/* Overlay badge */}
+              <div className="absolute bottom-5 left-5 flex items-center gap-3 px-4 py-3 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg">
+                <div className="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 14h16" /><path d="M5 14v2a4 4 0 004 4h6a4 4 0 004-4v-2" /><path d="M6 14V7a3 3 0 016 0" /><path d="M7 20v1.5M17 20v1.5" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-brand-text uppercase tracking-wide">Bathroom Remodeling</p>
+                  <p className="text-xs text-brand-text-secondary">Premium Quality · Expert Craftsmanship</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
